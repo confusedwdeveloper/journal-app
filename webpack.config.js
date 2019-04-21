@@ -5,7 +5,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 // module.exports used to exose something from a given file to nodejs
 module.exports = {
     entry: {
-        index: ['babel-polyfill', './src/index.js']
+        index: ['babel-polyfill', './src/index.js'],
+        edit: ['babel-polyfill', './src/edit.js']
     },
     output: {
         path: path.resolve(__dirname, 'public/scripts'),
