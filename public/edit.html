@@ -14,6 +14,35 @@
 </head>
 
 <body>
+  <header>
+    <h1 class="heading">Your Journal</h1>
+    <p class="header__para">Jot Down Your Life As it Happens</p>
+  </header>
+  <section class="home">
+    <a href="/index.html">Home</a>
+    <span id="moment"></span>
+  </section>
+  <section class="journal-inputs">
+    <input type="text" class="entry-title" placeholder="Journal Title">
+    <textarea class="entry-body" placeholder="What's on your mind?" rows="10" cols="30"></textarea>
+  </section>
+  <!-- Todos section -->
+  <section class="todos">
+    <h2 class="todo-heading">Todos for the day</h2>
+    <div class="todos__filters">
+      <input type="text" class="todos__input" placeholder="Filter your todos">
+      <label class="todos__checkbox"><input type="checkbox" id="todos__checkbox">Hide Completed</label>
+    </div>
+    <div class="todos-root"></div>
+  </section>
+  <form id="todos__form">
+    <input type="text" name="newTodo" class="todos__form__input" placeholder="Enter Your Todo..">
+    <button class="submit-todo">Submit Todo</button>
+  </form>
+  <div class="danger-zone">
+    <h2>Danger Zone</h2>
+    <button class="remove-entry">Remove Entry</button>
+  </div>
 <script src="./scripts/edit-bundle.js"></script>
 </body>
 
