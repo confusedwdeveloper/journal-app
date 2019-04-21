@@ -2,13 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Journal app with todo list integration">
+    <meta name="keywords" content="JOURNAL, TODO">
+    <meta name="author" content="Darshan Datta">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./icons8-magazine-48.png">
     <!-- <link rel="stylesheet" href="./styles/index.css"> -->
-    <title>Boilerplate App</title>
+    <title>Journal App</title>
 </head>
 <body>
-    <h1>Boilerplate</h1>
+    <header>
+      <h1 class="heading">Your Journal</h1>
+      <p class="header__para">Jot Down Your Life As it Happens</p>
+    </header>
+    <main>
+      <section class="filter">
+        <!-- Filter entries -->
+        <input type="text" id="filter" placeholder="Filter your entries">
+        <!-- Dropdown to sort entries -->
+        <select class="dropdown">
+          <option value="byEdited">Sort by last Edited</option>
+          <option value="byCreated">Sort by recently created</option>
+        </select>
+      </section>
+      <!-- A root section to render entries -->
+      <section id="root"></section>
+      <button class="button">New Entry</button>
+    </main>
     <script src="/scripts/index-bundle.js"></script>
 </body>
 </html>
