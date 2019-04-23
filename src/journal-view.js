@@ -1,4 +1,6 @@
 import moment from 'moment'
+import { sortJournals } from './journals'
+import { getFilters } from './filters'
 
 // A function to generate last edited message. I need moment for that
 const generateLastEdited = (timestamp) => {
@@ -45,4 +47,36 @@ const generateEntryCard = (item) => {
 
 }
 
-export { generateEntryCard }
+// Render everything from local storage
+const renderJournals = () => {
+    const rootEl = document.querySelector('#root') // root section to render
+    const containerEl = document.createElement('div') // container of all entries
+
+    // get the filters
+    const filters = getFilters()
+
+    //Get the sorted array. sorted based on dropdown
+    let journals = sortJournals(filters) //let because we will filter it
+
+    // Filter journals array based on user input
+    journals = journals.filter((entry) => {
+        return entry.title.toLowerCase().includes(filters.journalsSearchText.toLowerCase().trimStart())
+    })
+    // Now time to render our entries. First clear root div so as not to overlap
+    rootEl.innerHTML = ''
+
+    // Now time to render
+    if (journals.length === 0) { // when there's no entry to display
+        const emptyMessage = document.createElement('p')
+        emptyMessage.textContent = 'Nothing to see here'
+        rootEl.appendChild(emptyMessage)
+    } else {
+        journals.forEach((entry) => {
+            const card = generateEntryCard(entry)
+            rootEl.appendChild(card)
+        })
+    }
+
+}
+
+export { renderJournals }
