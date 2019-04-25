@@ -33,6 +33,7 @@ const createJournal = () => {
         todos: []
     })
     saveJournals() // saving all changes to storage
+    return id
 }
 
 // A function to remove journal entry based on id
