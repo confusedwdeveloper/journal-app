@@ -1,3 +1,4 @@
+// Function to manage filters object that will be dynamically updated
 const filters = {
     todoSearchText: '',
     journalsSearchText: '',

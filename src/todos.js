@@ -1,4 +1,4 @@
-
+// Module to perform crud operations and expose and manage todos. 
 import { getJournals } from './journals'
 import uuidv4 from 'uuid/v4'
 

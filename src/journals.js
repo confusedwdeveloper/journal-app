@@ -1,4 +1,4 @@
-// This is where I will put everything that handles journal entries
+// This is where I will put everything that handles journal entries. This includes journals array and functions to expose and perform CRUD operations on it
 import uuidv4 from 'uuid/v4'
 import moment from 'moment'
 

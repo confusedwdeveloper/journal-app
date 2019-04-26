@@ -1,3 +1,4 @@
+// Module to render data on front page
 import moment from 'moment'
 import { sortJournals } from './journals'
 import { getFilters } from './filters'

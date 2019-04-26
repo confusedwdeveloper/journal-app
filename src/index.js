@@ -1,3 +1,4 @@
+// This page will handle index.html
 import './scss/styles.scss'
 import { loadJournals, createJournal } from './journals'
 import { setFilters } from './filters'
