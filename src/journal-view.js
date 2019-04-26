@@ -43,6 +43,9 @@ const generateEntryCard = (item) => {
     editEl.textContent = generateLastEdited(item.updatedAt)
     rootDiv.appendChild(editEl)
 
+    // make cards clickable to take them to edit age
+    rootDiv.setAttribute('href', `/edit.html#${item.id}`)
+
     return rootDiv
 
 }
