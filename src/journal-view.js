@@ -83,4 +83,4 @@ const renderJournals = () => {
 
 }
 
-export { renderJournals }
+export { renderJournals, generateLastEdited }
