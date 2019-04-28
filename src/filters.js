@@ -2,7 +2,7 @@
 const filters = {
     todoSearchText: '',
     journalsSearchText: '',
-    hideComleted: false, // toggle todo
+    hideCompleted: false, // toggle todo
     sortBy: 'byEdited' // sort journal entries
 }
 
