@@ -2,6 +2,10 @@
 import { toggleTodo, removeTodo } from './todos'
 import { getJournals } from './journals'
 import { getFilters } from './filters'
+import { generateLastEdited } from './journal-view'
+import { findTimestamp } from './initialize'
+
+const timeEl = document.querySelector('#moment')// span displaying last edited
 
 // A function to generate individual todo card
 const generateTodoCard = (entryId, todo) => {
@@ -21,6 +25,7 @@ const generateTodoCard = (entryId, todo) => {
     // add event listener to chance todo completed status
     checkEl.addEventListener('change', (e) => {
         toggleTodo(entryId, todo.id) // calling imported function from todos module
+        timeEl.textContent = generateLastEdited(findTimestamp(entryId)) // update timestamp
 
         // Now call renderFunction defined below
         renderTodos(entryId)
@@ -46,10 +51,12 @@ const generateTodoCard = (entryId, todo) => {
     buttonEl.addEventListener('click', (e) => {
         removeTodo(entryId, todo.id)
         // Now render new list
+        timeEl.textContent = generateLastEdited(findTimestamp(entryId)) // update timestamp
         renderTodos(entryId)
     })
     // Append button
     rootEl.appendChild(buttonEl)
+    return rootEl
 
 }
 

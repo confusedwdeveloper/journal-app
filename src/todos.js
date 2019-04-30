@@ -1,6 +1,7 @@
 // Module to perform crud operations and expose and manage todos. 
 import { getJournals } from './journals'
 import uuidv4 from 'uuid/v4'
+import moment from 'moment'
 
 // function to expose todos
 const getTodos = (journalId) => {
@@ -26,6 +27,7 @@ const createTodo = (journalId, text) => {
         text,
         completed: false
     })
+    journal.updatedAt = moment().valueOf()
     localStorage.setItem('journal', JSON.stringify(journals))
 }
 
@@ -38,6 +40,7 @@ const removeTodo = (journalId, todoId) => {
 
     if (todoIndex > -1) {
         journal.todos.splice((todoIndex, 1))
+        journal.updatedAt = moment().valueOf()
         localStorage.setItem('journal', JSON.stringify(journals))
     }
 }
@@ -50,6 +53,7 @@ const journal = journals.find((entry) => entry.id === journalId)
 const todo = journal.todos.find((todo) => todo.id === todoId)
 if (todo) {
     todo.completed = !todo.completed
+    journal.updatedAt = moment().valueOf()
     localStorage.setItem('journal', JSON.stringify(journals))
 }
 }
