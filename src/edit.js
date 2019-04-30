@@ -53,7 +53,7 @@ document.querySelector('.todos__input').addEventListener('input', (e) => {
 //Wire up hideCompleted checkbox
 document.querySelector('#todos__checkbox').addEventListener('change', (e) => {
     setFilters({
-        hideComleted: e.target.checked
+        hideCompleted: e.target.checked
     })
     renderTodos(entryId)
 })
