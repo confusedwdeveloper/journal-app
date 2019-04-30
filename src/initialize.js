@@ -16,18 +16,13 @@ const initializeEditPage = (entryId) => {
     titleEl.value = entry.title
     bodyEl.value = entry.body
     
-    // calling EditPageEdit function to populate span element with last edited message
-    editPageEditMessage(entry)
+    document.querySelector('#moment').textContent = generateLastEdited(entry.updatedAt)
 }
 
-// Function to generate last edited message
-const editPageEditMessage = (entry) => {
-    const spanEl = document.querySelector('#moment')
-    // I will call this function inside initializeEditPage function
-    // So I don't need to verify the status of existence of entry
-    
-    spanEl.textContent = generateLastEdited(entry.updatedAt)
+// I better create a function to find Entry updatedAt timestamp since i will just be repeating it
+const findTimestamp = (entryId) => {
+    const entry = getJournals().find((item) => item.id === entryId)
+    return entry.updatedAt
 }
 
-
-export { initializeEditPage }
+export { initializeEditPage, findTimestamp }
