@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+:root {
+    scroll-behavior: smooth;
+    body {
+        background-color: $body-color;
+        margin: 0;
+        font-family: $body-font;
+        color: $text-color;
+    }
+}
+.root-container {
+    background-color: $card-color;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+}

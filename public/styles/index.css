@@ -1,3 +1,29 @@
+:root {
+  scroll-behavior: smooth; }
+  :root body {
+    background-color: #A0D1FE;
+    margin: 0;
+    font-family: "PT Serif", serif;
+    color: #445EAE; }
+
+.root-container {
+  background-color: #F2F6FD;
+  max-width: 600px;
+  width: 100%;
+  margin: auto; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  header .header__para {
+    margin-top: 0;
+    font-style: italic;
+    padding-left: 1rem; }
+  header .heading {
+    font-family: "Poppins", sans-serif;
+    color: #191E3D; }
 
 
 /*# sourceMappingURL=index.css.map*/
