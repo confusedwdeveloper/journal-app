@@ -1,0 +1,34 @@
+@import './variables';
+
+.home {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    a {
+        text-decoration: none;
+        background-color: $text-color;
+        box-shadow: 0 5px 0 darken($text-color, 30%);
+        color: white;
+        padding: 0.4rem 1rem;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease-in-out;
+        font-weight: 500;
+        border-radius: 4px;
+        position: relative;
+        &:hover {
+            background-color: lighten($text-color, 10%);
+            cursor: pointer;
+        }
+        &:active {
+            box-shadow: none;
+            top: 5px;
+        }
+    }
+    #moment {
+        font-weight: 500;
+        font-family: sans-serif;
+        font-style: oblique;
+        align-self: center;
+    }
+}

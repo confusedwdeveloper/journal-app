@@ -10,7 +10,8 @@
   background-color: #F2F6FD;
   max-width: 600px;
   width: 100%;
-  margin: auto; }
+  margin: auto;
+  min-height: 100vh; }
 
 header {
   display: flex;

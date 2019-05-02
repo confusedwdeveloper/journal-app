@@ -1,0 +1,9 @@
+@import './variables';
+
+@media (min-width: 600px) {
+    .home {
+        a {
+            padding: 0.4rem 2.25rem;
+        }
+    }
+}

@@ -10,7 +10,8 @@
   background-color: #F2F6FD;
   max-width: 600px;
   width: 100%;
-  margin: auto; }
+  margin: auto;
+  min-height: 100vh; }
 
 header {
   display: flex;
@@ -25,6 +26,38 @@ header {
     font-family: "Poppins", sans-serif;
     color: #191E3D;
     line-height: 0.8; }
+
+.home {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  .home a {
+    text-decoration: none;
+    background-color: #445EAE;
+    box-shadow: 0 5px 0 #192340;
+    color: white;
+    padding: 0.4rem 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: 500;
+    border-radius: 4px;
+    position: relative; }
+    .home a:hover {
+      background-color: #637ac2;
+      cursor: pointer; }
+    .home a:active {
+      box-shadow: none;
+      top: 5px; }
+  .home #moment {
+    font-weight: 500;
+    font-family: sans-serif;
+    font-style: oblique;
+    align-self: center; }
+
+@media (min-width: 600px) {
+  .home a {
+    padding: 0.4rem 2.25rem; } }
 
 
 /*# sourceMappingURL=edit.css.map*/
