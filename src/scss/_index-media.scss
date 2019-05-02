@@ -1,0 +1,16 @@
+@import './variables';
+
+@media (min-width: 600px) {
+    // changing filters to inline style as there is sufficient horizontal space
+    .filter {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #filter {
+        margin-bottom: auto;
+        max-width: 250px;
+    }
+    .dropdown {
+        max-width: 250px;
+    }
+}
