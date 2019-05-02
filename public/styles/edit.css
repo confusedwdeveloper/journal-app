@@ -23,7 +23,8 @@ header {
     padding-left: 1rem; }
   header .heading {
     font-family: "Poppins", sans-serif;
-    color: #191E3D; }
+    color: #191E3D;
+    line-height: 0.8; }
 
 
 /*# sourceMappingURL=edit.css.map*/
