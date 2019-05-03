@@ -1,0 +1,19 @@
+@import './variables';
+@import './mixins';
+
+.danger-zone {
+    padding: 10rem auto 10rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    h2 {
+        font-family: $heading-color;
+        font-size: 1.75rem;
+        color: red;
+        margin-top: 4rem;
+        margin-bottom: 1.5rem;
+    }
+    // style remove entry button
+    @include button('remove-entry', $button-color, $heading-color, 0.6rem 1.5rem);
+}

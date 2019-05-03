@@ -1,0 +1,26 @@
+@import './variables';
+
+// A mixin to reuse button styles
+@mixin button($class, $background, $box-shadow-color, $padding: 0.4rem 2.25rem) {
+    .#{$class} {
+      background-color: $background;
+      // box-shadow: 0 5px 0 $box-shadow-color;
+      color: white;
+      padding: $padding;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease-in-out;
+      font-weight: 600;
+      border-radius: 4px;
+      @content;
+      &:hover {
+        background-color: lighten($background, 10%);
+        cursor: pointer;
+      }
+      &:active {
+        box-shadow: none;
+        top: 5px;
+      }
+    }
+}

@@ -11,7 +11,8 @@
   max-width: 600px;
   width: 100%;
   margin: auto;
-  min-height: 100vh; }
+  min-height: 120vh;
+  padding-bottom: 5vh; }
 
 header {
   display: flex;
@@ -88,6 +89,25 @@ header {
   background-color: #fff;
   box-sizing: border-box;
   width: 100%; }
+
+.button {
+  background-color: #1133E1;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+  font-weight: 600;
+  border-radius: 4px;
+  margin: 5rem auto;
+  display: block; }
+  .button:hover {
+    background-color: #3554f0;
+    cursor: pointer; }
+  .button:active {
+    box-shadow: none;
+    top: 5px; }
 
 @media (min-width: 600px) {
   .filter {

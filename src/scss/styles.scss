@@ -1,4 +1,5 @@
 @import './variables';
+@import './mixins';
 
 @import './body';
 @import './header';
@@ -6,7 +7,11 @@
 // input filters
 @import './index-filter';
 
-
+// Style create Note Button
+@include button('button', $button-color, $heading-color, 0.6rem 1.5rem) {
+    margin: 5rem auto;
+    display: block;
+}
 
 
 //media

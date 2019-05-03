@@ -99,6 +99,7 @@ const renderTodos = (entryId) => {
     // Generate todos left List
     const todosLeftEl = document.createElement('p')
     todosLeftEl.textContent = todosLeft(todos)
+    todosLeftEl.style.cssText = 'font-weight: 500; font-family: sans-serif; font-style: oblique; text-align: center; margin: 3rem auto 1.5rem auto; color: #1133E1;'
     rootEl.appendChild(todosLeftEl)
 
     //Render todos
