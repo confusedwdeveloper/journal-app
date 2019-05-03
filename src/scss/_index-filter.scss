@@ -1,5 +1,5 @@
 @import './variables';
-
+@import './mixins';
 .filter {
     display: flex;
     flex-direction: column;
@@ -52,18 +52,5 @@
 
 // input filter
 #filter {
-    max-width: 340px;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-family: sans-serif;
-    font-weight: 500;
-    color: #444;
-    line-height: 1.3;
-    border: 1px solid #aaa;
-    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
-    border-radius: .5em;
-    background-color: #fff;
-    box-sizing: border-box;
-    width: 100%;
+   @include input-text(340px);
 }
