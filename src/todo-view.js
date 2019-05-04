@@ -11,9 +11,11 @@ const timeEl = document.querySelector('#moment')// span displaying last edited
 const generateTodoCard = (entryId, todo) => {
     // Creating root label to contain a checkbox, span and button
     const rootEl = document.createElement('label')
+    rootEl.classList.add('todo-card')
 
     // A div to contain checkbox and span
     const divEl = document.createElement('div')
+    divEl.classList.add('todo-card-div')
 
     // Create and set up/wire up a checkbox to toggle todo
     const checkEl = document.createElement('input')
@@ -99,13 +101,14 @@ const renderTodos = (entryId) => {
     // Generate todos left List
     const todosLeftEl = document.createElement('p')
     todosLeftEl.textContent = todosLeft(todos)
-    todosLeftEl.style.cssText = 'font-weight: 500; font-family: sans-serif; font-style: oblique; text-align: center; margin: 3rem auto 1.5rem auto; color: #1133E1;'
+    todosLeftEl.style.cssText = 'font-weight: 500; font-family: sans-serif; font-style: oblique; text-align: center; margin: 3rem auto 3rem auto; color: #1133E1;'
     rootEl.appendChild(todosLeftEl)
 
     //Render todos
     if (todos.length === 0) {
         const emptyMessageEl = document.createElement('p')
         emptyMessageEl.textContent = 'Nothing to show here'
+        emptyMessageEl.style.cssText = 'text-align: center;'
         rootEl.appendChild(emptyMessageEl)
     } else {
         todos.forEach((todo) => {

@@ -7,3 +7,16 @@
         }
     }
 }
+@media (min-width: 450px) {
+    #todos__form {
+        align-items: center;
+        flex-direction: row;
+    }
+}
+// @media (min-width: 480px) {
+//     #todos__form {
+//         [type="text"] {
+//             margin-bottom: auto;
+//         }
+//     }
+// }

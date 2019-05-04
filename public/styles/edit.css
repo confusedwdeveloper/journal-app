@@ -128,9 +128,24 @@ header {
     .todos__filters .todos__checkbox #todos__checkbox {
       margin-right: 0.35rem; }
 
-.todos__form {
+.todos-root {
+  background: #fff;
+  padding: 5vh 0; }
+  .todos-root .todo-card {
+    display: flex;
+    justify-content: space-around; }
+    .todos-root .todo-card .todo-card-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .todos-root .todo-card .todo-card-div [type="checkbox"] {
+        margin-right: 1rem; }
+
+#todos__form {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap; }
 
 .todos__form__input {
@@ -198,6 +213,11 @@ header {
 @media (min-width: 600px) {
   .home a {
     padding: 0.4rem 2.25rem; } }
+
+@media (min-width: 450px) {
+  #todos__form {
+    align-items: center;
+    flex-direction: row; } }
 
 
 /*# sourceMappingURL=edit.css.map*/

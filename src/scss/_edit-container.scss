@@ -1,0 +1,18 @@
+@import './variables';
+
+.todos-root {
+    background: #fff;
+    padding: 5vh 0;
+    .todo-card {
+        display: flex;
+        justify-content: space-around;
+        .todo-card-div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            [type="checkbox"] {
+                margin-right: 1rem;
+            }
+        }
+    }
+}

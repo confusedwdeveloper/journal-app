@@ -36,17 +36,22 @@
     }
 }
 // todo root container
-
+@import './edit-container';
 // Todo adding form
-.todos__form {
+#todos__form {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 .todos__form__input {
     @include input-text(340px);
+    // margin-bottom: 1rem;
 }
-@include button('submit-todo', $button-color, $heading-color, 0.6rem 1.5rem);
+@include button('submit-todo', $button-color, $heading-color, 0.6rem 1.5rem){
+    
+}
 
 //danger zone div
 @import './edit-danger-zone';
