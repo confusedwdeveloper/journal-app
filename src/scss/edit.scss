@@ -1,4 +1,5 @@
 @import './variables';
+@import './mixins';
 
 @import './body';
 @import './header';
@@ -16,6 +17,36 @@
     margin-bottom: 1.5rem;
     text-align: center;
 }
+// Todo filters and checkbox
+.todos__filters {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .todos__input {
+        @include input-text(320px);
+    }
+    .todos__checkbox {
+        font-family: sans-serif;
+        font-style: oblique;
+        text-align: center;
+        color: #1133E1;
+        #todos__checkbox {
+            margin-right: 0.35rem;
+        }
+    }
+}
+// todo root container
+
+// Todo adding form
+.todos__form {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.todos__form__input {
+    @include input-text(340px);
+}
+@include button('submit-todo', $button-color, $heading-color, 0.6rem 1.5rem);
 
 //danger zone div
 @import './edit-danger-zone';
