@@ -130,16 +130,42 @@ header {
 
 .todos-root {
   background: #fff;
-  padding: 5vh 0; }
+  padding: 5vh 1.6rem; }
   .todos-root .todo-card {
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 1.6rem;
+    margin: 1.5rem auto;
+    border: 1px dotted #888;
+    background: #F2F6FD;
+    transition: opacity 0.3s ease, background 0.3s ease; }
+    .todos-root .todo-card:hover {
+      opacity: 0.8;
+      background: #eee; }
     .todos-root .todo-card .todo-card-div {
+      max-width: 350px;
+      width: 100%;
       display: flex;
-      justify-content: space-between;
-      align-items: center; }
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 1.1rem;
+      color: #191E3D;
+      font-weight: 500; }
       .todos-root .todo-card .todo-card-div [type="checkbox"] {
         margin-right: 1rem; }
+    .todos-root .todo-card button {
+      font-size: 1rem;
+      border: none;
+      background: inherit;
+      text-decoration: underline;
+      position: relative; }
+      .todos-root .todo-card button:active {
+        top: 5px; }
+
+.todo-checked {
+  text-decoration: line-through;
+  color: #888; }
 
 #todos__form {
   display: flex;
@@ -218,6 +244,12 @@ header {
   #todos__form {
     align-items: center;
     flex-direction: row; } }
+
+@media (min-width: 480px) {
+  #todos__form {
+    justify-content: space-around; }
+    #todos__form [type="text"] {
+      margin-bottom: auto; } }
 
 
 /*# sourceMappingURL=edit.css.map*/

@@ -28,7 +28,6 @@ const generateTodoCard = (entryId, todo) => {
     checkEl.addEventListener('change', (e) => {
         toggleTodo(entryId, todo.id) // calling imported function from todos module
         timeEl.textContent = generateLastEdited(findTimestamp(entryId)) // update timestamp
-
         // Now call renderFunction defined below
         renderTodos(entryId)
     })
@@ -38,6 +37,9 @@ const generateTodoCard = (entryId, todo) => {
     // Create and set up span element
     const spanEl = document.createElement('span')
     spanEl.textContent = todo.text
+    if (checkEl.checked) {
+        spanEl.classList.add('todo-checked')
+    }
 
     // Append span
     divEl.appendChild(spanEl)
@@ -101,7 +103,7 @@ const renderTodos = (entryId) => {
     // Generate todos left List
     const todosLeftEl = document.createElement('p')
     todosLeftEl.textContent = todosLeft(todos)
-    todosLeftEl.style.cssText = 'font-weight: 500; font-family: sans-serif; font-style: oblique; text-align: center; margin: 3rem auto 3rem auto; color: #1133E1;'
+    todosLeftEl.style.cssText = 'font-weight: 500; font-family: sans-serif; font-style: oblique; text-align: center; margin: 3rem auto 3rem auto; color: #1133E1; font-size: 1.3rem;'
     rootEl.appendChild(todosLeftEl)
 
     //Render todos

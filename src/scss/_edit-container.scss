@@ -2,17 +2,48 @@
 
 .todos-root {
     background: #fff;
-    padding: 5vh 0;
+    padding: 5vh 1.6rem;
     .todo-card {
         display: flex;
         justify-content: space-around;
+        align-items: center;
+        padding: 2rem 1.6rem;
+        margin: 1.5rem auto;
+        border: 1px dotted #888;
+        background: $card-color;
+        transition: opacity 0.3s ease,
+                    background 0.3s ease;
+        &:hover {
+            opacity: 0.8;
+            background: #eee;
+        }
         .todo-card-div {
+            max-width: 350px;
+            width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
+            font-size: 1.1rem;
+            color: $heading-color;
+            font-weight: 500;
             [type="checkbox"] {
                 margin-right: 1rem;
             }
         }
+        button {
+            font-size: 1rem;
+            border: none;
+            background: inherit;
+            text-decoration: underline;
+            position: relative;
+            &:active {
+                top: 5px;
+            }
+
+        }
     }
+}
+.todo-checked {
+    text-decoration: line-through;
+    color: #888;
 }

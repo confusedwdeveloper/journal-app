@@ -13,10 +13,12 @@
         flex-direction: row;
     }
 }
-// @media (min-width: 480px) {
-//     #todos__form {
-//         [type="text"] {
-//             margin-bottom: auto;
-//         }
-//     }
-// }
+@media (min-width: 480px) {
+    #todos__form {
+        justify-content: space-around;
+        [type="text"] {
+            margin-bottom: auto;
+        }
+        
+    }
+}
