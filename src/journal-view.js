@@ -15,6 +15,7 @@ const generateDate = (timestamp) => {
 
 // Function to generate task left message
 const taskLeft = (array) => {
+    array = array.filter((todo) => !todo.completed)
     const x = array.length === 0? 'no' : array.length === 1? 'one' : 'some'
     const task = array.length === 1? 'task' : 'tasks'
     return `Your have ${x} ${task} left`
