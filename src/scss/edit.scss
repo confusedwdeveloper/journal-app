@@ -55,5 +55,20 @@
 
 //danger zone div
 @import './edit-danger-zone';
+
+//Todo button
+.todo-button {
+    display: none;
+    padding: 0.6rem 1.5rem;
+    color: #fff;
+    background: $tertiary-color;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
 //media queries
 @import './edit.media';

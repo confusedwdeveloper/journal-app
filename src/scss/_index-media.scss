@@ -13,4 +13,12 @@
     .dropdown {
         max-width: 250px;
     }
+    .scroll-button {
+        right: 20vw;
+    }
+}
+@media (min-width: 1000px) {
+    .scroll-button {
+        right: 30vw;
+    }
 }

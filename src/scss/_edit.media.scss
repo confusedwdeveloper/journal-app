@@ -22,3 +22,13 @@
         
     }
 }
+@media (min-width: 600px) {
+    .todo-button {
+        right: 20vw;
+    }
+}
+@media (min-width: 1000px) {
+    .todo-button {
+        right: 30vw;
+    }
+}

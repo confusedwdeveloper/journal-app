@@ -144,7 +144,7 @@ header {
 .button {
   background-color: #1133E1;
   color: white;
-  padding: 0.6rem 1.5rem;
+  padding: 0.7rem 2rem;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -160,6 +160,19 @@ header {
     box-shadow: none;
     top: 5px; }
 
+.scroll-button {
+  display: none;
+  padding: 0.6rem 1.5rem;
+  color: #fff;
+  background: #DE7C4A;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  opacity: 0.95; }
+
 @media (min-width: 600px) {
   .filter {
     flex-direction: row;
@@ -168,7 +181,13 @@ header {
     margin-bottom: auto;
     max-width: 250px; }
   .dropdown {
-    max-width: 250px; } }
+    max-width: 250px; }
+  .scroll-button {
+    right: 20vw; } }
+
+@media (min-width: 1000px) {
+  .scroll-button {
+    right: 30vw; } }
 
 
 /*# sourceMappingURL=index.css.map*/

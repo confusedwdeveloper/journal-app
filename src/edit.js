@@ -78,3 +78,18 @@ window.addEventListener('storage', (e) => {
         renderTodos(entryId)
     }
 })
+
+// todo-button
+const todoButton = document.querySelector('.todo-button')
+
+window.addEventListener('scroll', (e) => {
+    if (document.documentElement.scrollTop > 30 || document.body.scrollTop > 30) {
+        todoButton.style.display = 'block'
+    } else {
+        todoButton.style.display = 'none'
+    }
+})
+todoButton.addEventListener('click', (e) => {
+    document.querySelector('.remove-entry').scrollIntoView()
+    todoButton.style.zIndex = '-1'
+})

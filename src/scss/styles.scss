@@ -11,11 +11,26 @@
 @import './index-container';
 
 // Style create Note Button
-@include button('button', $button-color, $heading-color, 0.6rem 1.5rem) {
+@include button('button', $button-color, $heading-color, 0.7rem 2rem) {
     margin: 5rem auto;
     display: block;
 }
 
+// scroll button
+.scroll-button {
+    display: none;
+    padding: 0.6rem 1.5rem;
+    color: #fff;
+    background: $tertiary-color;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    opacity: 0.95;
+    // z-index: -1;
+}
 
 //media
 @import './index-media';

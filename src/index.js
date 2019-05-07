@@ -1,6 +1,6 @@
 // This page will handle index.html
 import './scss/styles.scss'
-import { loadJournals, createJournal } from './journals'
+import { loadJournals, createJournal, getJournals } from './journals'
 import { setFilters } from './filters'
 import { renderJournals } from './journal-view'
 
@@ -36,4 +36,16 @@ window.addEventListener('storage', (e) => {
         loadJournals()
         renderJournals()
     }
+})
+
+// scroll button 
+const scrollButton = document.querySelector('.scroll-button')
+if (getJournals().length > 5) {
+    scrollButton.style.display = 'block'
+} else {
+    scrollButton.style.display = 'none'
+}
+scrollButton.addEventListener('click', (e) => {
+    document.querySelector('.button').scrollIntoView()
+    scrollButton.style.display = 'none'
 })

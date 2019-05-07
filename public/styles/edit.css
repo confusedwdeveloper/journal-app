@@ -236,6 +236,19 @@ header {
       box-shadow: none;
       top: 5px; }
 
+.todo-button {
+  display: none;
+  padding: 0.6rem 1.5rem;
+  color: #fff;
+  background: #DE7C4A;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  opacity: 0.8; }
+
 @media (min-width: 600px) {
   .home a {
     padding: 0.4rem 2.25rem; } }
@@ -250,6 +263,14 @@ header {
     justify-content: space-around; }
     #todos__form [type="text"] {
       margin-bottom: auto; } }
+
+@media (min-width: 600px) {
+  .todo-button {
+    right: 20vw; } }
+
+@media (min-width: 1000px) {
+  .todo-button {
+    right: 30vw; } }
 
 
 /*# sourceMappingURL=edit.css.map*/
