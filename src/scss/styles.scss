@@ -7,6 +7,9 @@
 // input filters
 @import './index-filter';
 
+//root container and cards
+@import './index-container';
+
 // Style create Note Button
 @include button('button', $button-color, $heading-color, 0.6rem 1.5rem) {
     margin: 5rem auto;

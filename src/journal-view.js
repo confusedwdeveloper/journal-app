@@ -26,6 +26,7 @@ const generateEntryCard = (item) => {
     const rootDiv = document.createElement('a') // root element that we can return
 
     const dateEl = document.createElement('p') // to render Date
+    dateEl.classList.add('card-date')
     dateEl.textContent = generateDate(item.createdAt)
     rootDiv.appendChild(dateEl)
 
@@ -39,10 +40,12 @@ const generateEntryCard = (item) => {
 
     const taskEl = document.createElement('p')// to show tasks left
     taskEl.textContent = taskLeft(item.todos)
+    taskEl.classList.add('card-task')
     rootDiv.appendChild(taskEl)
 
-    const editEl = document.createElement('p')
+    const editEl = document.createElement('p') // item updated message
     editEl.textContent = generateLastEdited(item.updatedAt)
+    editEl.classList.add('card-edit')
     rootDiv.appendChild(editEl)
 
     // make cards clickable to take them to edit age
